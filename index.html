@@ -1,29 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omkar Enterprises | Home</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Omkar Enterprises</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+    nav {
+      background-color: #002147;
+    }
+    nav a {
+      color: white !important;
+    }
+    .hero {
+      background: #f2f2f2;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .calculator {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    .section-title {
+      margin-top: 60px;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Omkar Enterprises</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="plans.html">Plans</a>
-            <a href="eligibility.html">Eligibility</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Your Trusted Investment Partner</h2>
-            <p>Offering fixed monthly returns with transparency and legal agreements.</p>
-            <a href="plans.html" class="cta">Explore Investment Plans</a>
-        </section>
-    </main>
-    <a class="whatsapp" href="https://wa.me/8169302861" target="_blank">Chat on WhatsApp</a>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Omkar Enterprises</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#plans">Plans</a></li>
+        <li class="nav-item"><a class="nav-link" href="#eligibility">Eligibility</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#performance">Past Performance</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section id="home" class="hero">
+  <div class="container">
+    <h1 class="mb-4">Welcome to Omkar Enterprises</h1>
+    <p class="lead">Secure Your Future with Fixed Monthly Returns. Start Your Investment Journey Today!</p>
+  </div>
+</section>
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title">Investment Calculator</h2>
+    <div class="calculator">
+      <form id="calcForm">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="amount" class="form-label">Investment Amount (₹)</label>
+            <input type="number" class="form-control" id="amount" required>
+          </div>
+          <div class="col-md-6">
+            <label for="months" class="form-label">Duration (in Months)</label>
+            <input type="number" class="form-control" id="months" value="12" required>
+          </div>
+        </div>
+        <div class="mt-4">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+        </div>
+        <div id="result" class="mt-4"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="plans" class="py-5">
+  <div class="container">
+    <h2 class="section-title">Our Investment Plans</h2>
+    <ul>
+      <li>₹1L to ₹4.99L – 2% Monthly</li>
+      <li>₹5L to ₹9.99L – 2.5% Monthly</li>
+      <li>₹10L to ₹14.99L – 3.25% Monthly</li>
+      <li>₹15L to ₹19.99L – 3.5% Monthly</li>
+      <li>₹20L to ₹25L – 4% Monthly</li>
+    </ul>
+  </div>
+</section>
+
+<section id="eligibility" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title">Eligibility Criteria</h2>
+    <ul>
+      <li>Minimum investment ₹1,00,000</li>
+      <li>KYC documents required</li>
+      <li>Signed loan agreement</li>
+      <li>PDC (Post-Dated Cheques) required</li>
+    </ul>
+    <a href="#contact" class="btn btn-outline-primary mt-3">Check Eligibility & Contact Us</a>
+  </div>
+</section>
+
+<section id="faq" class="py-5">
+  <div class="container">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <ul>
+      <li><strong>Q: How secure is my investment?</strong> – All investments are secured with a legal loan agreement and PDC cheques.</li>
+      <li><strong>Q: What is the return structure?</strong> – Monthly fixed ROI as per plan selected.</li>
+      <li><strong>Q: Can I exit before maturity?</strong> – Premature withdrawal terms apply as per agreement.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="performance" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title">Past Performance</h2>
+    <p>To view real investor payouts and past performance screenshots, click below:</p>
+    <a href="https://wa.me/918169302861" class="btn btn-success">Get Performance on WhatsApp</a>
+  </div>
+</section>
+
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="section-title">Contact Us</h2>
+    <form action="https://formspree.io/f/mqkrndpq" method="POST">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" name="name" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" name="email" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea name="message" class="form-control" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Inquiry</button>
+    </form>
+  </div>
+</section>
+
+<footer class="text-center py-4 bg-dark text-white">
+  &copy; 2025 Omkar Enterprises. All rights reserved.
+</footer>
+
+<script>
+  document.getElementById("calcForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    let amount = parseFloat(document.getElementById("amount").value);
+    let months = parseInt(document.getElementById("months").value);
+    let rate = 0;
+    if (amount >= 100000 && amount <= 499999) rate = 0.02;
+    else if (amount <= 999999) rate = 0.025;
+    else if (amount <= 1499999) rate = 0.0325;
+    else if (amount <= 1999999) rate = 0.035;
+    else rate = 0.04;
+    let monthlyReturn = amount * rate;
+    let total = monthlyReturn * months;
+    document.getElementById("result").innerHTML =
+      `<div class="alert alert-info">Monthly Return: ₹${monthlyReturn.toFixed(2)}<br>Total in ${months} months: ₹${total.toFixed(2)}</div>`;
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
