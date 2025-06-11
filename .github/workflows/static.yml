@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Omkar Enterprises | Financial Growth Partner</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff;
+      color: #222;
+    }
+    header {
+      background-color: #0c2340;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .hero {
+      background: linear-gradient(to right, #003366, #00509e);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section h2 {
+      text-align: center;
+      color: #0c2340;
+    }
+    .services, .returns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: #f9f9f9;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    footer {
+      background-color: #0c2340;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div><strong>Omkar Enterprises</strong></div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#returns">Returns</a>
+    <a href="#how">How It Works</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Your Partner in Financial Growth</h1>
+  <p>Smart, secure, and profitable financial solutions for modern investors.</p>
+</section>
+
+<section id="about" class="section">
+  <h2>About Us</h2>
+  <p>Omkar Enterprises is committed to providing trustworthy financial services, including investment management, capital growth strategies, and personalized consulting for high-net-worth individuals and families.</p>
+</section>
+
+<section id="services" class="section">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Capital Protection Plans</h3>
+      <p>Secure your capital with legally backed agreements.</p>
+    </div>
+    <div class="card">
+      <h3>High-Yield Investments</h3>
+      <p>Get monthly returns with minimized risk exposure.</p>
+    </div>
+    <div class="card">
+      <h3>Consulting & Strategy</h3>
+      <p>Tailored financial strategies based on your goals.</p>
+    </div>
+  </div>
+</section>
+
+<section id="returns" class="section">
+  <h2>Our Past Returns</h2>
+  <div class="returns">
+    <div class="card">
+      <h3>2023</h3>
+      <p>Avg Monthly Return: 2.5%</p>
+    </div>
+    <div class="card">
+      <h3>2024</h3>
+      <p>Avg Monthly Return: 2.8%</p>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="section">
+  <h2>How It Works</h2>
+  <p>1. Book a free consultation <br>
+     2. Get your customized investment plan <br>
+     3. Sign digital agreement and start investing</p>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact Us</h2>
+  <p>Email: support@omkarservices.in<br>WhatsApp: +91-XXXX-XXXXXX</p>
+</section>
+
+<footer>
+  &copy; 2025 Omkar Enterprises | All rights reserved
+</footer>
+
+</body>
+</html>
