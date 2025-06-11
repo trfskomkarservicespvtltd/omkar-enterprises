@@ -1,173 +1,135 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FAQ - Emkar Enterprises</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Omkar Enterprises | Financial Growth Partner</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, sans-serif;
-      background: #f5f8fc;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff;
+      color: #222;
     }
-
-    .faq-section {
-      padding: 60px 20px;
+    header {
+      background-color: #0c2340;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-
-    .faq-section h2 {
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .hero {
+      background: linear-gradient(to right, #003366, #00509e);
+      color: white;
+      padding: 4rem 2rem;
       text-align: center;
-      font-size: 2.2rem;
-      color: #1a237e;
-      margin-bottom: 40px;
     }
-
-    .accordion {
-      max-width: 800px;
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
       margin: auto;
     }
-
-    .accordion-item {
-      margin-bottom: 15px;
-      border-radius: 6px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-
-    .accordion-button {
-      background: #ffffff;
-      color: #333;
-      padding: 18px 22px;
-      width: 100%;
-      text-align: left;
-      border: none;
-      font-size: 1.05rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .accordion-button:hover {
-      background-color: #e3f2fd;
-    }
-
-    .accordion-content {
-      max-height: 0;
-      overflow: hidden;
-      background: #fff;
-      transition: max-height 0.4s ease;
-      padding: 0 22px;
-    }
-
-    .accordion-content p {
-      margin: 15px 0;
-      padding-bottom: 15px;
-      font-size: 0.95rem;
-      color: #555;
-    }
-
-    .accordion-item.active .accordion-content {
-      max-height: 500px;
-      padding: 0 22px 20px;
-    }
-
-    .social-media-icons {
+    .section h2 {
       text-align: center;
-      margin-top: 50px;
+      color: #0c2340;
     }
-
-    .social-media-icons h3 {
-      font-size: 1.4rem;
-      margin-bottom: 20px;
-      color: #1a237e;
+    .services, .returns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
     }
-
-    .icon-links {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
+    .card {
+      background: #f9f9f9;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-
-    .icon {
-      font-size: 1.6rem;
+    footer {
+      background-color: #0c2340;
       color: white;
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      transition: transform 0.3s;
+      text-align: center;
+      padding: 2rem;
     }
-
-    .icon:hover {
-      transform: scale(1.1);
-    }
-
-    .whatsapp { background-color: #25D366; }
-    .instagram { background-color: #E4405F; }
-    .facebook { background-color: #3b5998; }
   </style>
 </head>
 <body>
-  <section id="faq" class="faq-section">
-    <div class="container">
-      <h2>Frequently Asked Questions</h2>
-      <div class="accordion">
-        <div class="accordion-item">
-          <button class="accordion-button">Is this investment SEBI or RBI registered?</button>
-          <div class="accordion-content">
-            <p>No, this is a private investment backed by notarized loan agreements and post-dated cheques under a private limited company structure.</p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-button">What is the minimum investment?</button>
-          <div class="accordion-content">
-            <p>The minimum investment is ₹1,00,000 with fixed monthly return options ranging from 2% to 4% depending on the amount.</p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-button">Is my principal safe and guaranteed?</button>
-          <div class="accordion-content">
-            <p>Yes, the principal is returned at the end of the 12-month term. Legal documentation is provided to ensure protection.</p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-button">How will I receive my monthly returns?</button>
-          <div class="accordion-content">
-            <p>Monthly returns are transferred directly to your bank account as per the agreed investment plan.</p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-button">Can I withdraw early?</button>
-          <div class="accordion-content">
-            <p>Yes, but with a penalty as per the agreement. Early withdrawal must be requested in writing with 30-day notice.</p>
-          </div>
-        </div>
-      </div>
 
-      <div class="social-media-icons">
-        <h3>Connect With Us</h3>
-        <div class="icon-links">
-          <a href="https://wa.me/918169302861" class="icon whatsapp" title="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
-          <a href="https://www.instagram.com/santosh8648" class="icon instagram" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.facebook.com/share/1Dtzckx9k/" class="icon facebook" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        </div>
-      </div>
+<header>
+  <div><strong>Omkar Enterprises</strong></div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#returns">Returns</a>
+    <a href="#how">How It Works</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Your Partner in Financial Growth</h1>
+  <p>Smart, secure, and profitable financial solutions for modern investors.</p>
+</section>
+
+<section id="about" class="section">
+  <h2>About Us</h2>
+  <p>Omkar Enterprises is committed to providing trustworthy financial services, including investment management, capital growth strategies, and personalized consulting for high-net-worth individuals and families.</p>
+</section>
+
+<section id="services" class="section">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Capital Protection Plans</h3>
+      <p>Secure your capital with legally backed agreements.</p>
     </div>
-  </section>
+    <div class="card">
+      <h3>High-Yield Investments</h3>
+      <p>Get monthly returns with minimized risk exposure.</p>
+    </div>
+    <div class="card">
+      <h3>Consulting & Strategy</h3>
+      <p>Tailored financial strategies based on your goals.</p>
+    </div>
+  </div>
+</section>
 
-  <script>
-    const accButtons = document.querySelectorAll(".accordion-button");
-    accButtons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const parent = btn.parentElement;
-        parent.classList.toggle("active");
-      });
-    });
-  </script>
+<section id="returns" class="section">
+  <h2>Our Past Returns</h2>
+  <div class="returns">
+    <div class="card">
+      <h3>2023</h3>
+      <p>Avg Monthly Return: 2.5%</p>
+    </div>
+    <div class="card">
+      <h3>2024</h3>
+      <p>Avg Monthly Return: 2.8%</p>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="section">
+  <h2>How It Works</h2>
+  <p>1. Book a free consultation <br>
+     2. Get your customized investment plan <br>
+     3. Sign digital agreement and start investing</p>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact Us</h2>
+  <p>Email: support@omkarservices.in<br>WhatsApp: +91-XXXX-XXXXXX</p>
+</section>
+
+<footer>
+  &copy; 2025 Omkar Enterprises | All rights reserved
+</footer>
+
 </body>
 </html>
