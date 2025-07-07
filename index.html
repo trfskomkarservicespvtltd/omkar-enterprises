@@ -1,135 +1,176 @@
+<!-- Full Investment Landing Page with Hero Banner, Floating Buttons, and Professional Layout -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Omkar Enterprises | Financial Growth Partner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eligibility Check | Omkar Enterprises</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #fff;
-      color: #222;
-    }
-    header {
-      background-color: #0c2340;
+    .hot-deal-btn {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background-color: #ef4444;
       color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 1rem;
+      padding: 10px 16px;
+      border-radius: 9999px;
+      font-weight: 600;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      animation: pulse 2s infinite;
+      z-index: 9999;
       text-decoration: none;
-      font-weight: 500;
     }
-    .hero {
-      background: linear-gradient(to right, #003366, #00509e);
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
       color: white;
-      padding: 4rem 2rem;
-      text-align: center;
+      border-radius: 50%;
+      padding: 14px;
+      font-size: 24px;
+      z-index: 9999;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
     }
-    .section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .section h2 {
-      text-align: center;
-      color: #0c2340;
-    }
-    .services, .returns {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .card {
-      background: #f9f9f9;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    footer {
-      background-color: #0c2340;
-      color: white;
-      text-align: center;
-      padding: 2rem;
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
     }
   </style>
 </head>
-<body>
+<body class="bg-white text-gray-900">
 
-<header>
-  <div><strong>Omkar Enterprises</strong></div>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#returns">Returns</a>
-    <a href="#how">How It Works</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <h1>Your Partner in Financial Growth</h1>
-  <p>Smart, secure, and profitable financial solutions for modern investors.</p>
-</section>
-
-<section id="about" class="section">
-  <h2>About Us</h2>
-  <p>Omkar Enterprises is committed to providing trustworthy financial services, including investment management, capital growth strategies, and personalized consulting for high-net-worth individuals and families.</p>
-</section>
-
-<section id="services" class="section">
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="card">
-      <h3>Capital Protection Plans</h3>
-      <p>Secure your capital with legally backed agreements.</p>
+  <!-- Hero Banner -->
+  <section class="relative bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1605902711622-cfb43c4437d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')] h-[80vh] flex items-center justify-center text-white">
+    <div class="bg-black bg-opacity-60 p-10 rounded-xl text-center max-w-3xl">
+      <h1 class="text-4xl font-bold mb-4">Secure Monthly Returns, Zero Market Risk</h1>
+      <p class="text-lg mb-6">100% Legal | Notarized Agreement | PDC Cheque | Optional Bank Guarantee</p>
+      <a href="#form" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-6 py-3 rounded-full">Check Your Eligibility Now</a>
     </div>
-    <div class="card">
-      <h3>High-Yield Investments</h3>
-      <p>Get monthly returns with minimized risk exposure.</p>
+  </section>
+
+  <!-- Investment Calculator -->
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold mb-6 text-center">Investment Returns Calculator</h2>
+    <div class="bg-white p-6 rounded-xl shadow-md">
+      <label class="block mb-2 font-medium">Investment Amount (₹):</label>
+      <input type="number" id="amountInput" placeholder="e.g. 100000" class="w-full border border-gray-300 p-2 rounded mb-4" />
+
+      <label class="block mb-2 font-medium">Select Bank Guarantee:</label>
+      <select id="security" class="w-full border border-gray-300 p-2 rounded mb-4">
+        <option value="25">25%</option>
+        <option value="35">35%</option>
+        <option value="45">45%</option>
+        <option value="50">50%</option>
+      </select>
+
+      <button onclick="calculateReturns()" class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">Calculate Returns</button>
+      <div id="output" class="mt-6 text-gray-800"></div>
     </div>
-    <div class="card">
-      <h3>Consulting & Strategy</h3>
-      <p>Tailored financial strategies based on your goals.</p>
+  </section>
+
+  <!-- Eligibility Form -->
+  <section id="form" class="bg-gray-100 py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-6">Get Your Personalized Investment Plan</h2>
+      <form action="https://formsubmit.co/careatomkarenterprises@gmail.com" method="POST" class="space-y-4 bg-white p-6 rounded-xl shadow">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://eligibility.omkarservices.in/thank-you.html">
+        <input type="text" name="name" placeholder="Full Name" required class="w-full p-2 border border-gray-300 rounded">
+        <input type="tel" name="phone" placeholder="Phone Number" required class="w-full p-2 border border-gray-300 rounded">
+        <input type="email" name="email" placeholder="Email Address" required class="w-full p-2 border border-gray-300 rounded">
+        <input type="text" name="city" placeholder="City" required class="w-full p-2 border border-gray-300 rounded">
+        <select name="Investment" required class="w-full p-2 border border-gray-300 rounded">
+          <option value="">Select Investment Budget</option>
+          <option value="25,000">25,000</option>
+          <option value="50,000">50,000</option>
+          <option value="1,00,000">1,00,000</option>
+          <option value="Above 2,00,000">Above 2,00,000</option>
+        </select>
+        <select name="Investment Experience" required class="w-full p-2 border border-gray-300 rounded">
+          <option value="">Investment Experience?</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+        <select name="How to contact you" required class="w-full p-2 border border-gray-300 rounded">
+          <option value="">Preferred Contact</option>
+          <option value="Call">Call</option>
+          <option value="Whatsapp">WhatsApp</option>
+        </select>
+        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Submit</button>
+      </form>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="returns" class="section">
-  <h2>Our Past Returns</h2>
-  <div class="returns">
-    <div class="card">
-      <h3>2023</h3>
-      <p>Avg Monthly Return: 2.5%</p>
+  <!-- Floating Buttons -->
+  <a href="https://www.omkarservices.in/hot-deals" class="hot-deal-btn" target="_blank">🔥 Today's Hot Deals</a>
+  <a href="https://wa.me/918169302861" class="whatsapp-float" target="_blank" title="Chat with us">💬</a>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-12 px-4">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10">
+      <div>
+        <h2 class="text-xl font-bold mb-3">TRFSK OMKAR SERVICES PRIVATE LIMITED</h2>
+        <p>📌 <strong>Office Address:</strong><br>
+        DNK Business Bay, Office No. 101, First Floor,<br>
+        Katraj-Kondhwa Road, Pune – 411046<br>
+        📞 8169302861</p>
+      </div>
+      <div>
+        <p>🏢 <strong>Registered Address:</strong><br>
+        House Opp. Bk No. 684,<br>Ulhasnagar-2, Kalyan – 421002</p>
+        <p class="mt-4 text-yellow-300 font-semibold">Secure Investment Solutions</p>
+        <p>15+ Years of Expertise & Trusted Results</p>
+        <div class="mt-4">
+          <a href="https://wa.me/918169302861" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Contact Us</a>
+        </div>
+      </div>
     </div>
-    <div class="card">
-      <h3>2024</h3>
-      <p>Avg Monthly Return: 2.8%</p>
+    <div class="mt-8 text-sm text-center border-t border-gray-600 pt-4">
+      <p class="text-orange-300 font-semibold">Disclaimer:</p>
+      <p class="text-gray-300">Omkar Enterprises provides financial consulting and investment management services. Past performance is not indicative of future results. Read all documents carefully before investing.</p>
+      <p class="mt-4">© 2025 Omkar Enterprises. All rights reserved.</p>
     </div>
-  </div>
-</section>
+  </footer>
 
-<section id="how" class="section">
-  <h2>How It Works</h2>
-  <p>1. Book a free consultation <br>
-     2. Get your customized investment plan <br>
-     3. Sign digital agreement and start investing</p>
-</section>
+  <!-- Calculator Script -->
+  <script>
+    const returnRates = {
+      25: { ror: 2.063, annual: 25 },
+      35: { ror: 1.988, annual: 24 },
+      45: { ror: 1.913, annual: 23 },
+      50: { ror: 1.875, annual: 23 }
+    };
+    function calculateReturns() {
+      const amount = parseFloat(document.getElementById('amountInput').value);
+      const security = parseInt(document.getElementById('security').value);
+      if (!amount || amount < 10000) {
+        document.getElementById('output').innerHTML = '<strong>Please enter a valid investment amount (min ₹10,000).</strong>';
+        return;
+      }
+      if (amount < 100000) {
+        document.getElementById('output').innerHTML = '<strong>Minimum investment for Bank Guarantee plans is ₹1,00,000.</strong>';
+        return;
+      }
+      const ror = returnRates[security];
+      const monthly = Math.round((amount * ror.ror) / 100);
+      const annual = monthly * 12;
+      const fdAnnual = Math.round((amount * 9) / 100);
+      const bondAnnual = Math.round((amount * 10) / 100);
+      const equityAnnual = Math.round((amount * 12) / 100);
 
-<section id="contact" class="section">
-  <h2>Contact Us</h2>
-  <p>Email: support@omkarservices.in<br>WhatsApp: +91-XXXX-XXXXXX</p>
-</section>
-
-<footer>
-  &copy; 2025 Omkar Enterprises | All rights reserved
-</footer>
-
+      document.getElementById('output').innerHTML = `
+        <strong>With Bank Guarantee at ${security}%:</strong><br>
+        ➤ Monthly Return: ₹${monthly.toLocaleString()}<br>
+        ➤ Annual Return: ₹${annual.toLocaleString()}<br><br>
+        <strong>Compare:</strong><br>
+        • FD (9%): ₹${fdAnnual.toLocaleString()}<br>
+        • Bonds (10%): ₹${bondAnnual.toLocaleString()}<br>
+        • Equity (12%): ₹${equityAnnual.toLocaleString()}<br><br>
+        <em>Choose security based on your risk comfort & financial goals.</em>
+      `;
+    }
+  </script>
 </body>
 </html>
